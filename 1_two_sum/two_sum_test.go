@@ -1,8 +1,6 @@
 package two_sum
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestTwoSum(t *testing.T) {
 	tests := [][]int{

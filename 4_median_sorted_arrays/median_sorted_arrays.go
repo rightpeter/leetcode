@@ -46,24 +46,22 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	if j == -1 {
 		if isOdd {
 			return float64(numsL[i])
-		} else {
-			return (float64(numsL[i]) + float64(numsL[i-1])) / 2
 		}
+		return (float64(numsL[i]) + float64(numsL[i-1])) / 2
 	}
 
 	if isOdd {
 		return math.Max(float64(numsL[i]), float64(numsS[j]))
-	} else {
-		m1 := numsL[i]
-		m2 := numsS[j]
-
-		if j > 0 && numsS[j-1] > numsL[i] {
-			m1 = numsS[j-1]
-		}
-
-		if i > 0 && numsL[i-1] > numsS[j] {
-			m2 = numsL[i-1]
-		}
-		return (float64(m1) + float64(m2)) / 2
 	}
+	m1 := numsL[i]
+	m2 := numsS[j]
+
+	if j > 0 && numsS[j-1] > numsL[i] {
+		m1 = numsS[j-1]
+	}
+
+	if i > 0 && numsL[i-1] > numsS[j] {
+		m2 = numsL[i-1]
+	}
+	return (float64(m1) + float64(m2)) / 2
 }
