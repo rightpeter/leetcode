@@ -8,9 +8,9 @@ class Solution:
         first = ListNode(0)
         first.next = head
         second = first.next
-        print(second)
-        print(second.next)
-        third = second.next.next
+        if second and second.next:
+            third = second.next.next
+        head = first
 
         while second and second.next:
             first.next = second.next
@@ -19,7 +19,7 @@ class Solution:
 
             first = second
             second = third
-            if second.next:
+            if second and second.next:
                 third = second.next.next
 
-        return head
+        return head.next
