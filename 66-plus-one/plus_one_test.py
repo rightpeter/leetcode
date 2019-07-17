@@ -35,5 +35,5 @@ class TestSolution(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # unittest.main()
-    TestSolution().test_7()
+    unittest.main()
+    # TestSolution().test_7()
