@@ -2,7 +2,9 @@
 
 from typing import List, T
 
+
 class ListNode:
+
     def __init__(self, x):
         self.val = x
         self.next = None
@@ -60,5 +62,3 @@ class NodeListHelper:
             return False
 
         return True
-
-
