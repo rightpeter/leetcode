@@ -12,7 +12,7 @@ class TestSolution(unittest.TestCase):
 
     def test_2(self):
         sol = Solution()
-        self.assertEqual(
+        self.assertAlmostEqual(
             sol.minmaxGasDist([
                 191487, 226099, 229330, 275915, 347493, 361220, 438140, 517380,
                 569432, 591085, 637975, 673423, 745828, 755551, 782476, 861733,
@@ -343,9 +343,9 @@ class TestSolution(unittest.TestCase):
                 99018856, 99040627, 99103885, 99219784, 99303797, 99332635,
                 99498183, 99526756, 99602945, 99627937, 99631060, 99641790,
                 99742228, 99787250, 99790980, 99865305, 99881903, 99883164
-            ], 9954366), 0.5)
+            ], 9954366), 10.01385740, delta=1e-6)
 
 
 if __name__ == '__main__':
-    # unittest.main()
-    TestSolution().test_1()
+    unittest.main()
+    # TestSolution().test_2()
