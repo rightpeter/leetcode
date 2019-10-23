@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import unittest
-from friends_of_appropriates_ages import Solution
+from friends_of_appropriates_ages_dp import Solution
 
 
 class TestSolution(unittest.TestCase):
